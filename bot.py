@@ -6,6 +6,7 @@ import asyncio
 
 
 def main():
+    
     load_dotenv()
 
     bot = commands.Bot(command_prefix="?", intents=discord.Intents.all())
@@ -18,7 +19,7 @@ def main():
     async def on_shutdown():
         print("caught!")
 
-    asyncio.run(bot.load_extension("cogs.scrapecog"))
+    asyncio.run(bot.load_extension("cogs.scrim"))
 
     token = os.environ.get("DISCORD_BOT_TOKEN")
 
